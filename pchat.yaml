@@ -1,0 +1,25 @@
+#this object
+server:
+  host: 127.0.0.1               #监听地址
+  port: 8899                    #监听端口
+  params:
+    reactor_num: 1
+    worker_num: 4               #worker 数量
+    max_request: 1000           #每个进程处理请求数
+    max_conn: 10000             #最大连接数
+    dispatch_mode: 4            #2 or 4
+    backlog: 256                #设置 Listen 队列长度
+    tcp_keepidle: 30            #4s没有数据传输就进行检测
+    tcp_keepinterval: 10,       #1s探测一次
+    tcp_keepcount: 5            #探测的次数:
+    tcp_fastopen: true          #开启 TCP 快速握手特性
+    open_length_check: true
+    package_max_length: 102410
+    package_length_type: N
+    package_length_offset: 8
+    package_body_offset: 16
+    open_tcp_nodelay: true
+    open_cpu_affinity: true
+    user: chat
+    group: chat
+    pid_file: server.pid
