@@ -4,10 +4,13 @@ use PHPChat\Server;
 
 include 'vendor/autoload.php';
 
-$config = yaml_parse_file('pchat.yaml');
-var_dump($config);
-$server = new Server('127.0.0.1', 8899);
+try {
+    $config = yaml_parse_file('pchat.yaml');
+    var_dump($config);
+    $server = new Server($config);
+} catch (Exception $ex) {
 
+}
 //$a = [
 //    "command" => 12,
 //    "data" => [

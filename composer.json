@@ -10,15 +10,15 @@
     }
   ],
   "require": {
-    "ext-json": "*"
+    "ext-json": "*",
+    "monolog/monolog": "^1.24"
   },
   "require-dev": {
     "swoole/ide-helper": "~4.4.7"
   },
   "autoload": {
     "psr-4": {
-      "PHPChat\\": "vendor/pchat/src",
-      "App\\": "app"
+      "PHPChat\\": "vendor/pchat/src"
     }
   }
 }
